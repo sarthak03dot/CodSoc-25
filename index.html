@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home - CodSoc'25</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#home" class="logo">
+        <img src="Assets/codsoc.webp" />
+        <div class="heading">CodSoc'25</div>
+      </a>
+
+      <div class="campus-title">
+        <h3>NITRA TECHNICAL CAMPUS</h3>
+        <a
+          href="https://t.me/+w5SEzq-glsI1ZjI9"
+          target="_blank"
+          class="join-button"
+          >Join Us</a
+        >
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+
+    <section class="hero active" id="home">
+      <h1>
+        <code> < <span class="multiple-text"></span></code>
+      </h1>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About Us</h2>
+      <p>
+        CodSoc'25 is a vibrant community of tech enthusiasts, developers, and
+        innovators at NITRA Technical Campus, founded to promote coding culture
+        and collaborative learning.
+      </p>
+    </section>
+
+    <section class="events" id="events">
+      <h2>Our Events</h2>
+      <ul>
+        <li>Coding Competitions</li>
+        <li>Poster Presentations</li>
+        <li>Quiz Battles</li>
+        <li>Peer Programming Sessions</li>
+      </ul>
+    </section>
+
+    <section class="team" id="team">
+      <h2>Meet Our Team</h2>
+      <p>From mentors to young coders — meet the minds behind CodSoc'25.</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Us</h2>
+      <p>
+        Follow us on
+        <a href="https://www.instagram.com/codsoc25/" target="_blank"
+          >Instagram</a
+        >
+        or email us at codsoc25@nitra.edu.in.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 CodSoc'25 — All Rights Reserved</p>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      const typed = new Typed(".multiple-text", {
+        strings: ["Hello Coders >", "Welcome to CodSoc'25 >"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 1200,
+        loop: true,
+      });
+
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll(".nav-links a");
+
+      function navigate() {
+        let hash = location.hash.replace("#", "") || "home";
+
+        sections.forEach((section) => {
+          section.classList.toggle("active", section.id === hash);
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + hash
+          );
+        });
+      }
+
+      window.addEventListener("hashchange", navigate);
+      window.addEventListener("load", navigate);
+
+      // menu-toggle
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinkContainer = document.querySelector(".nav-links");
+
+      menuToggle.addEventListener("click", () => {
+        navLinkContainer.classList.toggle("open");
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinkContainer.classList.remove("open");
+        });
+      });
+    </script>
+  </body>
+</html>
