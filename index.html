@@ -36,9 +36,35 @@
     </nav>
 
     <section class="hero active" id="home">
-      <h1>
-        <code> < <span class="multiple-text"></span></code>
+   <div class="sub-section">   <h1>
+    <code> < <span class="multiple-text1"></span></code>
+  </h1>
+
+  <div class="slider">
+    <div class="slide"><img src="Assets/codsoc2.jpg" alt="Slide 1" /></div>
+    <div class="slide"><img src="Assets/codsoc8.jpg" alt="Slide 2" /></div>
+    <div class="slide"><img src="Assets/codsoc9.jpg" alt="Slide 3" /></div>
+    <div class="slide"><img src="Assets/codsoc7.jpg" alt="Slide 4" /></div>
+  </div></div>
+      <div class="sub-section"><h1>
+        <code> < <span class="multiple-text2"></span></code>
       </h1>
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="Assets/codsoc2.jpg" alt="Slide 1" />
+          <img src="Assets/codsoc8.jpg" alt="Slide 2" />
+          <img src="Assets/codsoc9.jpg" alt="Slide 3" />
+          <img src="Assets/codsoc7.jpg" alt="Slide 4" />
+          <img src="Assets/codsoc6.jpg" alt="Slide 5" />
+          <img src="Assets/codsoc5.jpg" alt="Slide 5" />
+          <img src="Assets/codsoc3.jpg" alt="Slide 5" />
+          <img src="Assets/codsoc1.jpg" alt="Slide 5" />
+          <img src="Assets/codsoc10.jpg" alt="Slide 5" />
+          <img src="Assets/codsoc4.jpg" alt="Slide 5" />
+        </div>
+        <button class="prev">&#10094</button>
+        <button class="next">&#10095</button>
+      </div></div>
     </section>
 
     <section class="about" id="about">
@@ -51,13 +77,38 @@
     </section>
 
     <section class="events" id="events">
-      <h2>Our Events</h2>
-      <ul>
-        <li>Coding Competitions</li>
-        <li>Poster Presentations</li>
-        <li>Quiz Battles</li>
-        <li>Peer Programming Sessions</li>
-      </ul>
+      <h2>UPCOMING ONLINE EVENT</h2>
+      <h2>Our Past Events</h2>
+      <div class="event-cards">
+        <div class="card">
+          <a
+            href="https://www.hackerrank.com/coding-extravaganzapreliminary-round"
+            target="_blank"
+            ><img src="Assets/codesoc2025.png" alt="CodSoc'25"
+          /></a>
+        </div>
+        <div class="card">
+          <a
+            href="https://www.hackerrank.com/25codsoc-leads-selection-contest"
+            target="_blank"
+            ><img src="Assets/codesoc2024.png" alt="CodSoc'25"
+          /></a>
+        </div>
+        <div class="card">
+          <a
+            href="https://www.codechef.com/SEP221/?itm_medium=hpbanner_1&itm_campaign=SEP221"
+            target="_blank"
+            ><img src="Assets/long.JPG" alt="Long Challenge"
+          /></a>
+        </div>
+        <div class="card">
+          <a
+            href="https://www.codechef.com/START55?itm_campaign=contest_listing"
+            target="_blank"
+            ><img src="Assets/1661998346.jpg" alt="Starters 65"
+          /></a>
+        </div>
+      </div>
     </section>
 
     <section class="team" id="team">
@@ -82,8 +133,16 @@
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-      const typed = new Typed(".multiple-text", {
+      const typed = new Typed(".multiple-text1", {
         strings: ["Hello Coders >", "Welcome to CodSoc'25 >"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 1200,
+        loop: true,
+      });
+
+      const typed2 = new Typed(".multiple-text2", {
+        strings: [" Coding Extravaganza 2.0 >"],
         typeSpeed: 80,
         backSpeed: 80,
         backDelay: 1200,
@@ -124,6 +183,34 @@
           navLinkContainer.classList.remove("open");
         });
       });
+
+      // carousel
+      const track = document.querySelector(".carousel-track");
+      let slides = Array.from(track.children);
+      const nextBtn = document.querySelector(".next");
+      const prevBtn = document.querySelector(".prev");
+      let currIdx = 0;
+
+      function updateSlide() {
+        const slideWidth = slides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * currIdx}px)`;
+        track.style.transition = "0.4s ease";
+      }
+      nextBtn.addEventListener("click", () => {
+        currIdx = (currIdx + 1) % slides.length;
+        updateSlide();
+      });
+      prevBtn.addEventListener("click", () => {
+        currIdx = (currIdx - 1 + slides.length) % slides.length;
+        updateSlide();
+      });
+
+      window.addEventListener("resize", updateSlide);
+
+      setInterval(() => {
+        currIdx = (currIdx + 1) % slides.length;
+        updateSlide();
+      }, 5000);
     </script>
   </body>
 </html>
