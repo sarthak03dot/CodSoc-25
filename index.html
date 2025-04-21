@@ -3,17 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Home - CodSoc'25</title>
     <link rel="stylesheet" href="styles.css" />
+    <title>CodSoc'25</title>
   </head>
   <body>
-    <nav class="navbar">
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
       <a href="#home" class="logo">
-        <img src="Assets/codsoc.webp" />
+        <img src="Assets/codsoc.webp" alt="CodSoc'25 Logo" />
         <div class="heading">CodSoc'25</div>
       </a>
-
       <div class="campus-title">
         <h3>NITRA TECHNICAL CAMPUS</h3>
         <a
@@ -23,7 +22,6 @@
           >Join Us</a
         >
       </div>
-
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -31,93 +29,200 @@
         <li><a href="#team">Team</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
-      <div class="menu-toggle">&#9776;</div>
+      <div class="menu-toggle" aria-label="Toggle menu">☰</div>
     </nav>
-
+    <!-- Home -->
     <section class="hero active" id="home">
-   <div class="sub-section">   <h1>
-    <code> < <span class="multiple-text1"></span></code>
-  </h1>
-
-  <div class="slider">
-    <div class="slide"><img src="Assets/codsoc2.jpg" alt="Slide 1" /></div>
-    <div class="slide"><img src="Assets/codsoc8.jpg" alt="Slide 2" /></div>
-    <div class="slide"><img src="Assets/codsoc9.jpg" alt="Slide 3" /></div>
-    <div class="slide"><img src="Assets/codsoc7.jpg" alt="Slide 4" /></div>
-  </div></div>
-      <div class="sub-section"><h1>
-        <code> < <span class="multiple-text2"></span></code>
+      <h1>
+        <code>&lt; <span class="multiple-text1"></span></code>
+      </h1>
+      <div class="slider">
+        <div class="slide active">
+          <img src="Assets/codsoc2.jpg" alt="Event Slide 1" />
+        </div>
+        <div class="slide">
+          <img src="Assets/codsoc8.jpg" alt="Event Slide 2" />
+        </div>
+        <div class="slide">
+          <img src="Assets/codsoc9.jpg" alt="Event Slide 3" />
+        </div>
+        <div class="slide">
+          <img src="Assets/codsoc7.jpg" alt="Event Slide 4" />
+        </div>
+      </div>
+      <h1>
+        <code>&lt; <span class="multiple-text2"></span></code>
       </h1>
       <div class="carousel">
         <div class="carousel-track">
-          <img src="Assets/codsoc2.jpg" alt="Slide 1" />
-          <img src="Assets/codsoc8.jpg" alt="Slide 2" />
-          <img src="Assets/codsoc9.jpg" alt="Slide 3" />
-          <img src="Assets/codsoc7.jpg" alt="Slide 4" />
-          <img src="Assets/codsoc6.jpg" alt="Slide 5" />
-          <img src="Assets/codsoc5.jpg" alt="Slide 5" />
-          <img src="Assets/codsoc3.jpg" alt="Slide 5" />
-          <img src="Assets/codsoc1.jpg" alt="Slide 5" />
-          <img src="Assets/codsoc10.jpg" alt="Slide 5" />
-          <img src="Assets/codsoc4.jpg" alt="Slide 5" />
+          <img src="Assets/codsoc6.jpg" alt="Carousel Slide 1" />
+          <img src="Assets/codsoc5.jpg" alt="Carousel Slide 2" />
+          <img src="Assets/codsoc3.jpg" alt="Carousel Slide 3" />
+          <img src="Assets/codsoc1.jpg" alt="Carousel Slide 4" />
         </div>
-        <button class="prev">&#10094</button>
-        <button class="next">&#10095</button>
-      </div></div>
-    </section>
-
-    <section class="about" id="about">
-      <h2>About Us</h2>
-      <p>
-        CodSoc'25 is a vibrant community of tech enthusiasts, developers, and
-        innovators at NITRA Technical Campus, founded to promote coding culture
-        and collaborative learning.
-      </p>
-    </section>
-
-    <section class="events" id="events">
-      <h2>UPCOMING ONLINE EVENT</h2>
-      <h2>Our Past Events</h2>
-      <div class="event-cards">
-        <div class="card">
-          <a
-            href="https://www.hackerrank.com/coding-extravaganzapreliminary-round"
-            target="_blank"
-            ><img src="Assets/codesoc2025.png" alt="CodSoc'25"
-          /></a>
-        </div>
-        <div class="card">
-          <a
-            href="https://www.hackerrank.com/25codsoc-leads-selection-contest"
-            target="_blank"
-            ><img src="Assets/codesoc2024.png" alt="CodSoc'25"
-          /></a>
-        </div>
-        <div class="card">
-          <a
-            href="https://www.codechef.com/SEP221/?itm_medium=hpbanner_1&itm_campaign=SEP221"
-            target="_blank"
-            ><img src="Assets/long.JPG" alt="Long Challenge"
-          /></a>
-        </div>
-        <div class="card">
-          <a
-            href="https://www.codechef.com/START55?itm_campaign=contest_listing"
-            target="_blank"
-            ><img src="Assets/1661998346.jpg" alt="Starters 65"
-          /></a>
+      </div>
+      <div class="touch_with_us">
+        <p>Get in Touch With Us:</p>
+        <div class="touch-link">
+          <a href="mailto:sarthak03december@gmail.com" target="_blank"
+            >QUERIES?</a
+          >
+          <a href="https://linktr.ee/sarthak03dot" target="_blank">DEVELOPER</a>
+          <a href="https://t.me/+w5SEzq-glsI1ZjI9" target="_blank">JOIN US!</a>
         </div>
       </div>
     </section>
-
+    <!-- About Section -->
+    <section class="about" id="about">
+      <h2>About CodSoc'25</h2>
+      <p>
+        <strong>CodSoc'25</strong> is the vibrant coding society of NITRA
+        Technical Campus, Ghaziabad. We are a passionate community of students
+        united by our love for coding and all things tech.
+      </p>
+      <p>
+        Our goal is to foster a collaborative environment where coders of all
+        levels — from beginners to advanced — can improve their skills through
+        hands-on workshops, hackathons, coding challenges, seminars, and
+        real-world projects.
+      </p>
+      <p>
+        We are driven by curiosity and problem-solving. Whether you dream of
+        competing in international contests like ICPC, building software
+        products, or mastering algorithms for interviews — CodSoc'25 is your
+        launchpad.
+      </p>
+      <p>
+        <strong>Join us</strong> on this exciting journey, and be part of a
+        community shaping the future, one line of code at a time.
+      </p>
+      <div class="documents">
+        <h2>OFFICIAL DOCUMENTS</h2>
+        <div class="docs">
+          <iframe
+            src="https://drive.google.com/file/d/1K0tk4wvKnHWZIIXnD2fNMbTIC9JD-EX7/preview"
+            width="640"
+            height="480"
+            allow="autoplay"
+          ></iframe>
+          <iframe
+            src="https://docs.google.com/document/d/1c2F6k4ErjWE9kpdgGW2tdQ0RtT7wcGwT3K2J63R0aZE/preview"
+            width="640"
+            height="480"
+            allow="autoplay"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- Events Section -->
+    <section class="events" id="events">
+      <div class="upcomming-event">
+        <h2>Upcoming Events</h2>
+        <div class="card">
+          <img src="Assets/Nitra.jpg" alt="Coding Extravaganza" />
+          <a
+            href=""
+            target="_blank"
+            >Comming Soon...</a
+          >
+        </div>
+      </div>
+      <h2>Our Past Events</h2>
+      <div class="event-cards">
+        <div class="card">
+          <img src="Assets/codesoc2025.png" alt="Coding Extravaganza" />
+          <a
+            href="https://www.hackerrank.com/coding-extravaganzapreliminary-round"
+            target="_blank"
+            >View Event</a
+          >
+        </div>
+        <div class="card">
+          <img src="Assets/codesoc2024.png" alt="CodSoc'25 Leads" />
+          <a
+            href="https://www.hackerrank.com/25codsoc-leads-selection-contest"
+            target="_blank"
+            >View Event</a
+          >
+        </div>
+        <div class="card">
+          <img src="Assets/long.JPG" alt="Long Challenge" />
+          <a
+            href="https://www.codechef.com/SEP221/?itm_medium=hpbanner_1&itm_campaign=SEP221"
+            target="_blank"
+            >View Event</a
+          >
+        </div>
+        <div class="card">
+          <img src="Assets/1661998346.jpg" alt="Starters 65" />
+          <a
+            href="https://www.codechef.com/START55?itm_campaign=contest_listing"
+            target="_blank"
+            >View Event</a
+          >
+        </div>
+      </div>
+      <h2>Used Platforms</h2>
+      <div class="platforms">
+        <div class="platform">
+          <img src="Assets/codedrils.png" alt="CodeDrills" />
+        </div>
+        <div class="platform"><img src="Assets/icpc.png" alt="ICPC" /></div>
+        <div class="platform">
+          <img src="Assets/codechef.png" alt="CodeChef" />
+        </div>
+        <div class="platform">
+          <img src="Assets/stackoverflow.png" alt="StackOverflow" />
+        </div>
+        <div class="platform">
+          <img src="Assets/leetcode.png" alt="LeetCode" />
+        </div>
+        <div class="platform">
+          <img src="Assets/codeforces.png" alt="Codeforces" />
+        </div>
+      </div>
+    </section>
+    <!-- Team Section -->
     <section class="team" id="team">
       <h2>Meet Our Team</h2>
-      <p>From mentors to young coders — meet the minds behind CodSoc'25.</p>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="Assets/epsit.jpg" alt="Team Member" />
+          <h3>Epsit Bhardwaj</h3>
+          <p>Lead</p>
+        </div>
+        <div class="team-member">
+          <img src="Assets/omji.jpg" alt="Team Member" />
+          <h3>Om Ji Dwivedi</h3>
+          <p>Co-Lead</p>
+        </div>
+        <div class="team-member">
+          <img src="Assets/utkarsah.jpg" alt="Team Member" />
+          <h3>Utkarsh Madeshiya</h3>
+          <p>Technical Lead</p>
+        </div>
+        <div class="team-member">
+          <img src="Assets/akash.jpg" alt="Team Member" />
+          <h3>Akaash Tripathi</h3>
+          <p>Event Coordinator</p>
+        </div>
+        <div class="team-member">
+          <img src="Assets/kamal.jpg" alt="Team Member" />
+          <h3>Kamal Kishor</h3>
+          <p>Outreach Lead</p>
+        </div>
+      </div>
     </section>
-
+    <!-- Contact Section -->
     <section class="contact" id="contact">
       <h2>Contact Us</h2>
+      <p>Reach out to us for any queries or to join our community!</p>
+      <form action="mailto:sarthak03december@gmail.com">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
       <p>
         Follow us on
         <a href="https://www.instagram.com/codsoc25/" target="_blank"
@@ -126,39 +231,52 @@
         or email us at codsoc25@nitra.edu.in.
       </p>
     </section>
-
+    <!-- Footer -->
     <footer>
-      <p>&copy; 2025 CodSoc'25 — All Rights Reserved</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/codsoc25/" target="_blank"
+          >Instagram</a
+        >
+        <a href="https://www.linkedin.com/in/codsoc25/" target="_blank"
+          >Linkedin</a
+        >
+        <a href="https://t.me/+w5SEzq-glsI1ZjI9" target="_blank">Telegram</a>
+        <a href="mailto:codsoc25@nitra.edu.in">Email</a>
+      </div>
+      <p>
+        © 2025 CodSoc'25 — All Rights Reserved | Developed by
+        <a href="https://linktr.ee/sarthak03dot" target="_blank"
+          >Sarthak03dot</a
+        >
+      </p>
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
-      const typed = new Typed(".multiple-text1", {
-        strings: ["Hello Coders >", "Welcome to CodSoc'25 >"],
+      // Typed.js for animated text
+      new Typed(".multiple-text1", {
+        strings: ["Hello Coders! >", "Welcome to CodSoc'25! >"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 1200,
+        loop: true,
+      });
+      new Typed(".multiple-text2", {
+        strings: ["Coding Extravaganza 2.0! >"],
         typeSpeed: 80,
         backSpeed: 80,
         backDelay: 1200,
         loop: true,
       });
 
-      const typed2 = new Typed(".multiple-text2", {
-        strings: [" Coding Extravaganza 2.0 >"],
-        typeSpeed: 80,
-        backSpeed: 80,
-        backDelay: 1200,
-        loop: true,
-      });
-
+      // Section navigation
       const sections = document.querySelectorAll("section");
       const navLinks = document.querySelectorAll(".nav-links a");
-
       function navigate() {
-        let hash = location.hash.replace("#", "") || "home";
-
+        const hash = location.hash.replace("#", "") || "home";
         sections.forEach((section) => {
           section.classList.toggle("active", section.id === hash);
         });
-
         navLinks.forEach((link) => {
           link.classList.toggle(
             "active",
@@ -166,51 +284,49 @@
           );
         });
       }
-
       window.addEventListener("hashchange", navigate);
       window.addEventListener("load", navigate);
 
-      // menu-toggle
+      // Mobile menu toggle
       const menuToggle = document.querySelector(".menu-toggle");
       const navLinkContainer = document.querySelector(".nav-links");
-
       menuToggle.addEventListener("click", () => {
         navLinkContainer.classList.toggle("open");
       });
-
       navLinks.forEach((link) => {
         link.addEventListener("click", () => {
           navLinkContainer.classList.remove("open");
         });
       });
 
-      // carousel
-      const track = document.querySelector(".carousel-track");
-      let slides = Array.from(track.children);
-      const nextBtn = document.querySelector(".next");
-      const prevBtn = document.querySelector(".prev");
-      let currIdx = 0;
-
-      function updateSlide() {
-        const slideWidth = slides[0].getBoundingClientRect().width;
-        track.style.transform = `translateX(-${slideWidth * currIdx}px)`;
-        track.style.transition = "0.4s ease";
+      // Slider functionality
+      const slides = document.querySelectorAll(".slider .slide");
+      let currentSlide = 0;
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
       }
-      nextBtn.addEventListener("click", () => {
-        currIdx = (currIdx + 1) % slides.length;
-        updateSlide();
-      });
-      prevBtn.addEventListener("click", () => {
-        currIdx = (currIdx - 1 + slides.length) % slides.length;
-        updateSlide();
-      });
-
-      window.addEventListener("resize", updateSlide);
-
       setInterval(() => {
-        currIdx = (currIdx + 1) % slides.length;
-        updateSlide();
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
       }, 5000);
+      showSlide(currentSlide);
+
+      // Carousel functionality
+      const track = document.querySelector(".carousel-track");
+      const carouselSlides = Array.from(track.children);
+      let currentIndex = 0;
+      function updateCarousel() {
+        const slideWidth = carouselSlides[0].getBoundingClientRect().width;
+        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+      }
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % carouselSlides.length;
+        updateCarousel();
+      }, 4000);
+      window.addEventListener("resize", updateCarousel);
+      updateCarousel();
     </script>
   </body>
 </html>
