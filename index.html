@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sarthak03dot" />
     <link rel="stylesheet" href="styles.css" />
     <title>CodSoc'25</title>
   </head>
@@ -120,11 +121,7 @@
         <h2>Upcoming Events</h2>
         <div class="card">
           <img src="Assets/Nitra.jpg" alt="Coding Extravaganza" />
-          <a
-            href=""
-            target="_blank"
-            >Comming Soon...</a
-          >
+          <a href="" target="_blank">Comming Soon...</a>
         </div>
       </div>
       <h2>Our Past Events</h2>
@@ -252,81 +249,6 @@
     </footer>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-      // Typed.js for animated text
-      new Typed(".multiple-text1", {
-        strings: ["Hello Coders! >", "Welcome to CodSoc'25! >"],
-        typeSpeed: 80,
-        backSpeed: 80,
-        backDelay: 1200,
-        loop: true,
-      });
-      new Typed(".multiple-text2", {
-        strings: ["Coding Extravaganza 2.0! >"],
-        typeSpeed: 80,
-        backSpeed: 80,
-        backDelay: 1200,
-        loop: true,
-      });
-
-      // Section navigation
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll(".nav-links a");
-      function navigate() {
-        const hash = location.hash.replace("#", "") || "home";
-        sections.forEach((section) => {
-          section.classList.toggle("active", section.id === hash);
-        });
-        navLinks.forEach((link) => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === "#" + hash
-          );
-        });
-      }
-      window.addEventListener("hashchange", navigate);
-      window.addEventListener("load", navigate);
-
-      // Mobile menu toggle
-      const menuToggle = document.querySelector(".menu-toggle");
-      const navLinkContainer = document.querySelector(".nav-links");
-      menuToggle.addEventListener("click", () => {
-        navLinkContainer.classList.toggle("open");
-      });
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          navLinkContainer.classList.remove("open");
-        });
-      });
-
-      // Slider functionality
-      const slides = document.querySelectorAll(".slider .slide");
-      let currentSlide = 0;
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle("active", i === index);
-        });
-      }
-      setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
-      }, 5000);
-      showSlide(currentSlide);
-
-      // Carousel functionality
-      const track = document.querySelector(".carousel-track");
-      const carouselSlides = Array.from(track.children);
-      let currentIndex = 0;
-      function updateCarousel() {
-        const slideWidth = carouselSlides[0].getBoundingClientRect().width;
-        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
-      }
-      setInterval(() => {
-        currentIndex = (currentIndex + 1) % carouselSlides.length;
-        updateCarousel();
-      }, 4000);
-      window.addEventListener("resize", updateCarousel);
-      updateCarousel();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

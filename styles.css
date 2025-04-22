@@ -94,7 +94,6 @@ body::before {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--accent-color);
-  font-weight: bold;
   transform: translateY(-2px);
 }
 .nav-links a.active::after {
@@ -552,6 +551,10 @@ footer {
   }
   .carousel-track img {
     height: 200px;
+  }
+  .docs{
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 /* Keyframe Animations */
