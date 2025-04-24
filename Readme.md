@@ -1,4 +1,4 @@
-# CodSoc'25 Website
+# CodSoc'25 
 
 Welcome to the official website for **CodSoc'25**, the Coding Society of NITRA Technical Campus! This project is a modern, interactive web platform designed to promote our mission of fostering coding culture, showcasing events, and connecting with the student community. Built with HTML, CSS, JavaScript, and enhanced by Swup for seamless page transitions and Typed.js for animated text, the site offers a dynamic user experience.
 
